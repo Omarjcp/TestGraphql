@@ -1,0 +1,23 @@
+type Avocado {
+  id: ID!
+  name: String!
+  description: String
+  image: String
+  price: Int
+}
+
+type Query {
+  getAvocado: [Avocado]
+}
+
+type Mutation {
+  createAvocado(input: CreateAvocadoInput!): Avocado
+}
+
+input CreateAvocadoInput {
+  id: ID!
+  name: String!
+  description: String
+  image: String
+  price: Int
+}
